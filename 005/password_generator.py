@@ -19,12 +19,10 @@ for char in range(1, nr_symbols + 1):
 for char in range(1, nr_numbers + 1):
   password_list += random.choice(numbers)
 
-print(password_list)
+# shuffle the password list to make it more random
 random.shuffle(password_list)
-print(password_list)
 
-password = ""
-for char in password_list:
-  password += char
+# convert the list to a string
+password = "".join(password_list)
 
 print(f"Your password is: {password}")
